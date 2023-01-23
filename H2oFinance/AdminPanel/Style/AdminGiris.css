@@ -1,0 +1,80 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Unbounded;
+}
+
+html, body {
+    height: 100%;
+    background-image: url('../images/girissayfasi.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.turkuaz {
+    background-color: #004F4D;
+}
+
+.fume {
+    background-color: #1F2024;
+}
+
+.antrasit {
+    background-color: #4B4952;
+}
+
+.silver {
+    background-color: #79717A;
+}
+
+.lila {
+    background-color: #A68F97;
+}
+
+.giris {
+    width: 100%;
+    height: 100%;
+}
+
+.Container {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .content img {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -100px;
+        margin-bottom: 60px;
+    }
+
+    .content input {
+        height: 40px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+#lbtn_giris {
+    background-color: #004F4D;
+    text-decoration: none;
+    color: white;
+    margin-top: 15px;
+    font-size: 20pt;
+    padding: 5px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}

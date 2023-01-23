@@ -1,0 +1,44 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Unbounded;
+}
+
+body {
+}
+
+.turkuaz {
+    background-color: #004F4D;
+}
+
+.fume {
+    background-color: #1F2024;
+}
+
+.antrasit {
+    background-color: #4B4952;
+}
+
+.silver {
+    background-color: #79717A;
+}
+
+.lila {
+    background-color: #A68F97;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+}
+
+    .header h1 {
+        text-align: center;
+        padding: 15px;
+    }
+
+.H2Ologo {
+    width: 65px;
+    margin: 10px;
+}
+
