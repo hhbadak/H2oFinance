@@ -69,10 +69,15 @@
   <ItemGroup>
     <Content Include="AdminPanel\AdminGiris.aspx" />
     <Content Include="AdminPanel\AdminPanelHomePage.aspx" />
+    <Content Include="AdminPanel\BakiyeOnay.aspx" />
+    <Content Include="AdminPanel\Images\engineering.png" />
     <Content Include="AdminPanel\Images\GirisSayfasi.png" />
     <Content Include="AdminPanel\Images\H2oDamlaLogo.png" />
+    <Content Include="AdminPanel\KriptoEkle.aspx" />
+    <Content Include="AdminPanel\NftEkle.aspx" />
     <Content Include="AdminPanel\Style\AdminGiris.css" />
     <Content Include="AdminPanel\Style\MainLayoutCSS.css" />
+    <Content Include="AdminPanel\Style\SayfalarCSS.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +101,27 @@
     </Compile>
     <Compile Include="AdminPanel\AdminPanelMasterPage.Master.designer.cs">
       <DependentUpon>AdminPanelMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BakiyeOnay.aspx.cs">
+      <DependentUpon>BakiyeOnay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BakiyeOnay.aspx.designer.cs">
+      <DependentUpon>BakiyeOnay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\KriptoEkle.aspx.cs">
+      <DependentUpon>KriptoEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\KriptoEkle.aspx.designer.cs">
+      <DependentUpon>KriptoEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NftEkle.aspx.cs">
+      <DependentUpon>NftEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NftEkle.aspx.designer.cs">
+      <DependentUpon>NftEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

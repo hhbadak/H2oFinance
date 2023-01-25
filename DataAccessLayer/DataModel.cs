@@ -58,5 +58,45 @@ namespace DataAccessLayer
             finally { con.Close(); }
         }
         #endregion
+        #region COIN METOTLARI
+        public bool coinKontrol(string isim)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM Coinler WHERE Isim = @isim";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", isim);
+                con.Open();
+                int sayi = Convert.ToInt32(cmd.ExecuteScalar());
+                if (sayi == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
+        public bool coinEkle(Coinler coin)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Coinler(Isim,CoinNick,Max_Arz) VALUES(@isim,@coinNick,@maxArz)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", coin.isim);
+                cmd.Parameters.AddWithValue("@coinNick", coin.coinNick);
+                cmd.Parameters.AddWithValue("@maxArz", coin.maxArz);
+                con.Open();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+        #endregion
     }
 }

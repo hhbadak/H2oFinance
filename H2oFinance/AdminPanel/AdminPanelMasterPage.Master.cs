@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,15 @@ namespace H2oFinance.AdminPanel
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["yonetici"] != null)
+            {
+                Yoneticiler y = (Yoneticiler)Session["yonetici"];
+                lbl_kisiAdi.Text = $"{y.isim} {y.soyIsim}";
+            }
+            else
+            {
+                Response.Redirect("AdminGiris.aspx");
+            }
         }
 
         protected void lbtn_cikis_Click(object sender, EventArgs e)

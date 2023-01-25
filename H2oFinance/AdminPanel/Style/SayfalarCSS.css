@@ -1,0 +1,14 @@
+﻿.homePage {
+    width: 100%;
+    border: 1px solid black;
+    height: 100%;
+    background-color: #d57ac2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+    .homePage .homePageImg {
+        width: 500px;
+    }

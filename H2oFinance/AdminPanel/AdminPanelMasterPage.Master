@@ -7,26 +7,33 @@
     <title>Admin PANEL</title>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet" />
     <link href="Style/MainLayoutCSS.css" rel="stylesheet" />
+    <link href="Style/SayfalarCSS.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="header lila">
+    <form id="form1" runat="server" style="height: 100%;">
+        <div class="header silver">
             <div style="float: left">
                 <a href="AdminPanelHomePage.aspx">
                     <img class="H2Ologo" src="Images/H2oDamlaLogo.png" /></a>
             </div>
             <h1>ADMİN PANEL</h1>
             <div class="cikis">
+                <asp:Label ID="lbl_kisiAdi" runat="server"></asp:Label>
                 <asp:LinkButton ID="lbtn_cikis" runat="server" Text="ÇIKIŞ" OnClick="lbtn_cikis_Click"></asp:LinkButton>
             </div>
         </div>
-
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        <div class="container">
+            <div class="sideContainer lila">
+                <a href="KriptoEkle.aspx">Kripto Ekle</a><br />
+                <a href="NftEkle.aspx">NFT Ekle</a><br />
+                <a href="BakiyeOnay.aspx">Bakiye Onay</a>
+            </div>
+            <div class="contentContainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
     </form>
 </body>
 </html>

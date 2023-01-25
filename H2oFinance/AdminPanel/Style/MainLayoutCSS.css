@@ -4,7 +4,8 @@
     font-family: Unbounded;
 }
 
-body {
+html, body {
+    height: 100%;
 }
 
 .turkuaz {
@@ -55,3 +56,35 @@ body {
         color: azure;
         padding: 10px;
     }
+
+.container {
+    height: 100%;
+}
+
+.sideContainer {
+    height: 100%;
+    width: 15%;
+    float: left;
+    display: grid;
+    align-content: center;
+}
+
+    .sideContainer a {
+        padding: 7px;
+        text-decoration: none;
+        color: #000000;
+        padding-left: 15px;
+        margin-bottom: 10px;
+        font-size: 15pt;
+        background-color: #004F4D;
+    }
+
+        .sideContainer a:hover {
+            background-color: whitesmoke;
+        }
+
+.contentContainer {
+    height: 100%;
+    float: left;
+    width: 85%;
+}
