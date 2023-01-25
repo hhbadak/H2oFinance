@@ -26,6 +26,16 @@ namespace H2oFinance.AdminPanel
                     Session["yonetici"] = y;
                     Response.Redirect("AdminPanelHomePage.aspx");
                 }
+                else
+                {
+                    pnl_hata.Visible = true;
+                    lbl_hata.Text = "Kullanıcı Adı veya Şifre Hatalı";
+                }
+            }
+            else
+            {
+                pnl_hata.Visible = true;
+                lbl_hata.Text = "Kullanıcı Adı ve Şifre Boş Olamaz";
             }
         }
     }

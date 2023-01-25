@@ -14,9 +14,9 @@ namespace H2oFinance.AdminPanel
 
         }
 
-        protected void lbtn_giris_Click(object sender, EventArgs e)
+        protected void lbtn_cikis_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("AdminGiris.aspx");
         }
     }
 }

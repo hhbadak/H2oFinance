@@ -18,7 +18,11 @@
                     <img class="H2Ologo" src="Images/H2oDamlaLogo.png" /></a>
             </div>
             <h1>ADMİN PANEL</h1>
+            <div class="cikis">
+                <asp:LinkButton ID="lbtn_cikis" runat="server" Text="ÇIKIŞ" OnClick="lbtn_cikis_Click"></asp:LinkButton>
+            </div>
         </div>
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

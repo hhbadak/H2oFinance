@@ -14,6 +14,9 @@
             <div class="Container silver">
                 <div class="content">
                     <img src="Images/H2oDamlaLogo.png" />
+                    <asp:Panel ID="pnl_hata" runat="server" Visible="false">
+                        <asp:Label ID="lbl_hata" runat="server"></asp:Label>
+                    </asp:Panel>
                     <asp:TextBox ID="tb_mail" runat="server" placeholder="Mail Adresi Giriniz">
                     </asp:TextBox>
                     <asp:TextBox ID="tb_sifre" runat="server" TextMode="Password" placeholder="Şifre Giriniz"></asp:TextBox>
