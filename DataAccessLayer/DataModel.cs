@@ -89,6 +89,7 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@coinNick", coin.coinNick);
                 cmd.Parameters.AddWithValue("@maxArz", coin.maxArz);
                 con.Open();
+                int sayi = Convert.ToInt32(cmd.ExecuteScalar());
                 return true;
             }
             catch

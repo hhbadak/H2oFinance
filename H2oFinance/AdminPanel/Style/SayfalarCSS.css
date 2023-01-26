@@ -12,3 +12,66 @@
     .homePage .homePageImg {
         width: 500px;
     }
+
+.ekleContainer {
+    height: 100%;
+    width: 100%;
+    background-color: #00ff90;
+}
+
+.ekleTitle {
+    text-align: center;
+    padding-top: 75px;
+    font-size: 18pt;
+}
+
+.ekleContent {
+    width: 40%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+    .ekleContent a {
+        background-color: #0d0909;
+        margin: 20px auto 0;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+
+        .ekleContent a:hover {
+            color: red;
+        }
+
+.textbox {
+    background-color: antiquewhite;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.basarili {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #04bbc7;
+    font-weight: 900;
+    text-align: center;
+    height: 40px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.basarisiz {
+    width: 100%;
+    margin: 0 auto;
+    background-color: red;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    height: 40px;
+    padding-top: 15px;
+    font-size: 20px;
+}
