@@ -83,13 +83,55 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Coinler(Isim,CoinNick,Max_Arz) VALUES(@isim,@coinNick,@maxArz)";
+                cmd.CommandText = "INSERT INTO Coinler(Isim,CoinNick,Max_Arz,Resim) VALUES(@isim,@coinNick,@maxArz,@resim)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@isim", coin.isim);
                 cmd.Parameters.AddWithValue("@coinNick", coin.coinNick);
                 cmd.Parameters.AddWithValue("@maxArz", coin.maxArz);
+                cmd.Parameters.AddWithValue("@resim", coin.resim);
+                con.Open();
+                cmd.ExecuteScalar();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+        #endregion
+        #region NFT METOTLARI
+        public bool nftKontrol(string isim)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM NFT WHERE Isim = @isim";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", isim);
                 con.Open();
                 int sayi = Convert.ToInt32(cmd.ExecuteScalar());
+                if (sayi == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
+        public bool nftEkle(NFT nft)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO NFT(Isim,Fiyat,Resim) VALUES(@isim,@fiyat,@resim)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", nft.isim);
+                cmd.Parameters.AddWithValue("@fiyat", nft.fiyat);
+                cmd.Parameters.AddWithValue("@resim", nft.resim);
+                con.Open();
+                cmd.ExecuteScalar();
                 return true;
             }
             catch

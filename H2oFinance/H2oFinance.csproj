@@ -70,9 +70,11 @@
     <Content Include="AdminPanel\AdminGiris.aspx" />
     <Content Include="AdminPanel\AdminPanelHomePage.aspx" />
     <Content Include="AdminPanel\BakiyeOnay.aspx" />
+    <Content Include="AdminPanel\CoinDelist.aspx" />
     <Content Include="AdminPanel\Images\engineering.png" />
     <Content Include="AdminPanel\Images\GirisSayfasi.png" />
     <Content Include="AdminPanel\Images\H2oDamlaLogo.png" />
+    <Content Include="AdminPanel\Images\NftCoinImage\kripto.PNG" />
     <Content Include="AdminPanel\KriptoEkle.aspx" />
     <Content Include="AdminPanel\NftEkle.aspx" />
     <Content Include="AdminPanel\Style\AdminGiris.css" />
@@ -109,6 +111,13 @@
     <Compile Include="AdminPanel\BakiyeOnay.aspx.designer.cs">
       <DependentUpon>BakiyeOnay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\CoinDelist.aspx.cs">
+      <DependentUpon>CoinDelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CoinDelist.aspx.designer.cs">
+      <DependentUpon>CoinDelist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\KriptoEkle.aspx.cs">
       <DependentUpon>KriptoEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,6 +150,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
