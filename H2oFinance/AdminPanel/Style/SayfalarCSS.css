@@ -80,3 +80,85 @@
     width: inherit;
     height: 25px;
 }
+
+.check {
+    display: flex;
+    margin-top: 25px;
+}
+
+    .check label {
+        margin-right: 15px;
+    }
+
+.talepcontainer {
+    background-color: #00ff90;
+    height: 100%;
+}
+
+.talepbaslik {
+    font-size: 50px;
+    text-align: center;
+    padding: 50px;
+}
+
+.taleptable {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    padding: 5px;
+    font-weight: 900;
+}
+
+    .taleptable th {
+        padding: 7px;
+    }
+
+    .taleptable td {
+        padding: 7px;
+    }
+
+
+
+.btn_onayla {
+    text-decoration: none;
+    background-color: darkgreen;
+    color: whitesmoke;
+    padding: 3px;
+    margin: 3px;
+}
+
+.btn_reddet {
+    text-decoration: none;
+    background-color: red;
+    color: whitesmoke;
+    padding: 4px;
+    margin: 3px;
+}
+
+.butonlar {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn_bekleyen {
+    background-color: #bfb005;
+    color: whitesmoke;
+}
+
+.btn_onaylanan {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.btn_reddedilen {
+    background-color: red;
+    color: whitesmoke;
+}

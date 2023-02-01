@@ -9,9 +9,11 @@ namespace DataAccessLayer
     public class Coinler
     {
         public int ID { get; set; }
-        public string isim { get; set; }
-        public string coinNick { get; set; }
-        public int maxArz { get; set; }
-        public string resim { get; set; }
+        public string Isim { get; set; }
+        public string CoinNick { get; set; }
+        public int Max_Arz { get; set; }
+        public string Resim { get; set; }
+        public decimal Fiyat { get; set; }
+        public bool Aktif { get; set; }
     }
 }

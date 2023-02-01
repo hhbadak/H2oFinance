@@ -17,6 +17,7 @@
             <asp:TextBox CssClass="textbox" ID="tb_isim" runat="server" placeholder="İsim Giriniz"></asp:TextBox>
             <asp:TextBox CssClass="textbox" ID="tb_nick" runat="server" placeholder="Kısaltmasını Giriniz"></asp:TextBox>
             <asp:TextBox CssClass="textbox" ID="tb_arz" runat="server" placeholder="Max Arz Değerini Giriniz"></asp:TextBox>
+            <asp:TextBox ID="tb_fiyat" runat="server" placeholder="Fiyat Giriniz" CssClass="textbox"></asp:TextBox>
             <label>Resim Ekle</label><br />
             <asp:FileUpload CssClass="resimEkle" ID="fu_resim" runat="server"></asp:FileUpload>
             <asp:LinkButton ID="lbtn_ekle" runat="server" OnClick="lbtn_ekle_Click">EKLE</asp:LinkButton>

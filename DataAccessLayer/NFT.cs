@@ -11,7 +11,6 @@ namespace DataAccessLayer
         public int ID { get; set; }
         public string isim { get; set; }
         public int uyeID { get; set; }
-        public string uye { get; set; }
         public decimal fiyat { get; set; }
         public string resim { get; set; }
     }

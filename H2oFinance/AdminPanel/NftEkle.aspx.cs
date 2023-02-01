@@ -28,18 +28,6 @@ namespace H2oFinance.AdminPanel
                     {
                         nft.isim = tb_isim.Text;
                         nft.fiyat = Convert.ToDecimal(tb_fiyat.Text);
-                        if (dm.nftEkle(nft))
-                        {
-                            pnl_basarili.Visible = true;
-                            pnl_basarisiz.Visible = false;
-                            tb_fiyat.Text = tb_isim.Text = "";
-                        }
-                        else
-                        {
-                            pnl_basarili.Visible = false;
-                            pnl_basarisiz.Visible = true;
-                            lbl_mesaj.Text = "NFT Eklenirken Bir Hata Oluştu";
-                        }
                     }
                     else
                     {
@@ -56,6 +44,18 @@ namespace H2oFinance.AdminPanel
                             string isim = Guid.NewGuid().ToString();
                             nft.resim = isim + uzanti;
                             fu_resim.SaveAs(Server.MapPath("~/AdminPanel/Images/NftCoinImage/" + isim + uzanti));
+                            if (dm.nftEkle(nft))
+                            {
+                                pnl_basarili.Visible = true;
+                                pnl_basarisiz.Visible = false;
+                                tb_fiyat.Text = tb_isim.Text = "";
+                            }
+                            else
+                            {
+                                pnl_basarili.Visible = false;
+                                pnl_basarisiz.Visible = true;
+                                lbl_mesaj.Text = "NFT Eklenirken Bir Hata Oluştu";
+                            }
                             if (dm.nftEkle(nft))
                             {
                                 pnl_basarili.Visible = true;
