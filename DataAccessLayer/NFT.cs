@@ -13,5 +13,6 @@ namespace DataAccessLayer
         public int uyeID { get; set; }
         public decimal fiyat { get; set; }
         public string resim { get; set; }
+        public byte Aktif { get; set; }
     }
 }

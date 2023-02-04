@@ -95,13 +95,13 @@
     height: 100%;
 }
 
-.talepbaslik {
+.talepBaslik {
     font-size: 50px;
     text-align: center;
     padding: 50px;
 }
 
-.taleptable {
+.talepTable {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -110,11 +110,11 @@
     font-weight: 900;
 }
 
-    .taleptable th {
+    .talepTable th {
         padding: 7px;
     }
 
-    .taleptable td {
+    .talepTable td {
         padding: 7px;
     }
 
@@ -161,4 +161,22 @@
 .btn_reddedilen {
     background-color: red;
     color: whitesmoke;
+}
+
+.delistLink {
+    border: 1px solid gray;
+    background-color: #5a4f4f;
+    color: white;
+    text-decoration: none;
+    width: 15%;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    font-size: 25pt;
+}
+
+.btn_sil {
+    text-decoration: none;
+    color: #960202;
 }
