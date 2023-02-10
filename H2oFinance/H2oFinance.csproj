@@ -75,7 +75,9 @@
     <Content Include="AdminPanel\Images\GirisSayfasi.png" />
     <Content Include="AdminPanel\Images\H2oDamlaLogo.png" />
     <Content Include="AdminPanel\Images\NftCoinImage\kripto.PNG" />
+    <Content Include="AdminPanel\KriptoDuzenle.aspx" />
     <Content Include="AdminPanel\KriptoEkle.aspx" />
+    <Content Include="AdminPanel\KriptoListele.aspx" />
     <Content Include="AdminPanel\NftEkle.aspx" />
     <Content Include="AdminPanel\Style\AdminGiris.css" />
     <Content Include="AdminPanel\Style\MainLayoutCSS.css" />
@@ -118,12 +120,26 @@
     <Compile Include="AdminPanel\CoinDelist.aspx.designer.cs">
       <DependentUpon>CoinDelist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\KriptoDuzenle.aspx.cs">
+      <DependentUpon>KriptoDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\KriptoDuzenle.aspx.designer.cs">
+      <DependentUpon>KriptoDuzenle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\KriptoEkle.aspx.cs">
       <DependentUpon>KriptoEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPanel\KriptoEkle.aspx.designer.cs">
       <DependentUpon>KriptoEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\KriptoListele.aspx.cs">
+      <DependentUpon>KriptoListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\KriptoListele.aspx.designer.cs">
+      <DependentUpon>KriptoListele.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\NftEkle.aspx.cs">
       <DependentUpon>NftEkle.aspx</DependentUpon>

@@ -27,6 +27,7 @@
         <div class="container">
             <div class="sideContainer lila">
                 <a href="KriptoEkle.aspx">Kripto Ekle</a><br />
+                <a href="KriptoListele.aspx">Kripto Güncelle</a><br />
                 <a href="NftEkle.aspx">NFT Ekle</a><br />
                 <a href="BakiyeOnay.aspx">Bakiye Onay</a><br />
                 <a href="CoinDelist.aspx">Coin Delist</a>

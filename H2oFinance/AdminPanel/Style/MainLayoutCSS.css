@@ -89,3 +89,7 @@ html, body {
     float: left;
     width: 85%;
 }
+
+.row {
+    padding: 10px 0;
+}

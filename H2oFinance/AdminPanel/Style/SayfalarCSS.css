@@ -180,3 +180,34 @@
     text-decoration: none;
     color: #960202;
 }
+
+.inputBox {
+    padding: 7px;
+    border: 1px solid silver;
+    width: 400px;
+    border-radius: 3px;
+}
+
+.coinList {
+    border: none;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .coinList th {
+        padding: 7px;
+    }
+
+    .coinList td {
+        padding: 7px;
+    }
+
+.btn_duzenle {
+}
+
+    .btn_duzenle a {
+        background-color: #221b1b;
+        color: whitesmoke;
+        text-decoration: none;
+    }

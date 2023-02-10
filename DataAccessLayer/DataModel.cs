@@ -144,6 +144,53 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public bool kriptoDuzenle(Coinler c)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Coinler SET Isim = @isim, CoinNick = @cNick, Max_Arz = @mArz WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", c.Isim);
+                cmd.Parameters.AddWithValue("@cNick", c.CoinNick);
+                cmd.Parameters.AddWithValue("@mArz", c.Max_Arz);
+                cmd.Parameters.AddWithValue("@id", c.ID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+        public Coinler kriptoGetir(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT Isim, CoinNick, Max_Arz, Resim, Fiyat FROM Coinler WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                Coinler c = new Coinler();
+                while (reader.Read())
+                {
+                    c.Isim = reader.GetString(0);
+                    c.CoinNick = reader.GetString(1);
+                    c.Max_Arz = reader.GetInt32(2);
+                    c.Resim = reader.GetString(3);
+                    c.Fiyat = reader.GetDecimal(4);
+                }
+                return c;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
         #endregion
         #region NFT METOTLARI
         public bool nftKontrol(string isim)
