@@ -28,7 +28,7 @@
                     <td><%#Eval("CoinNick") %></td>
                     <td><%#Eval("Max_Arz") %></td>
                     <td>
-                        <img style="text-align: center;" src="../Images/NftCoinImage/<%# Eval("Resim") %>" width="50" /></td>
+                        <img style="text-align: center;" src="../AdminPanel/Images/NftCoinImage/<%# Eval("Resim") %>" width="50" /></td>
                     <td><%#Eval("Fiyat") %></td>
                     <td class="btn_duzenle">
                         <a href='KriptoDuzenle.aspx?mid=<%# Eval("ID") %>' class="duzenle">Düzenle</a>

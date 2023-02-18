@@ -83,14 +83,13 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Coinler(Isim,CoinNick,Max_Arz,Resim,Fiyat,Aktif) VALUES(@isim,@coinNick,@maxArz,@resim,@fiyat,@aktif)";
+                cmd.CommandText = "INSERT INTO Coinler(Isim,CoinNick,Max_Arz,Resim,Fiyat,Durum) VALUES(@isim,@coinNick,@maxArz,@resim,@fiyat,1)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@isim", coin.Isim);
                 cmd.Parameters.AddWithValue("@coinNick", coin.CoinNick);
                 cmd.Parameters.AddWithValue("@maxArz", coin.Max_Arz);
                 cmd.Parameters.AddWithValue("@resim", coin.Resim);
                 cmd.Parameters.AddWithValue("@fiyat", coin.Fiyat);
-                cmd.Parameters.AddWithValue("@aktif", coin.Aktif);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -123,7 +122,7 @@ namespace DataAccessLayer
             List<Coinler> coin = new List<Coinler>();
             try
             {
-                cmd.CommandText = "SELECT ID,Isim,CoinNick,Fiyat FROM Coinler WHERE Aktif=1";
+                cmd.CommandText = "SELECT ID,CoinNick,Isim,Max_Arz,Resim,Fiyat FROM Coinler WHERE Durum=1";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -131,9 +130,11 @@ namespace DataAccessLayer
                 {
                     Coinler c = new Coinler();
                     c.ID = reader.GetInt32(0);
-                    c.Isim = reader.GetString(1);
-                    c.CoinNick = reader.GetString(2);
-                    c.Fiyat = reader.GetDecimal(3);
+                    c.CoinNick = reader.GetString(1);
+                    c.Isim = reader.GetString(2);
+                    c.Max_Arz = reader.GetInt32(3);
+                    c.Resim = !reader.IsDBNull(4) ? reader.GetString(4) : "none.png";
+                    c.Fiyat = reader.GetDecimal(5);
                     coin.Add(c);
                 }
                 return coin;
@@ -148,12 +149,13 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "UPDATE Coinler SET Isim = @isim, CoinNick = @cNick, Max_Arz = @mArz WHERE ID = @id";
+                cmd.CommandText = "UPDATE Coinler SET CoinNick = @cNick, Isim = @isim, Max_Arz = @mArz, Resim = @resim WHERE ID = @id ";
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", c.ID);
                 cmd.Parameters.AddWithValue("@isim", c.Isim);
                 cmd.Parameters.AddWithValue("@cNick", c.CoinNick);
                 cmd.Parameters.AddWithValue("@mArz", c.Max_Arz);
-                cmd.Parameters.AddWithValue("@id", c.ID);
+                cmd.Parameters.AddWithValue("@resim", c.Resim);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -168,7 +170,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT Isim, CoinNick, Max_Arz, Resim, Fiyat FROM Coinler WHERE ID = @id";
+                cmd.CommandText = "SELECT Isim,CoinNick,Max_Arz,Resim FROM Coinler WHERE ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -180,8 +182,7 @@ namespace DataAccessLayer
                     c.Isim = reader.GetString(0);
                     c.CoinNick = reader.GetString(1);
                     c.Max_Arz = reader.GetInt32(2);
-                    c.Resim = reader.GetString(3);
-                    c.Fiyat = reader.GetDecimal(4);
+                    c.Resim = !reader.IsDBNull(3) ? reader.GetString(3) : "none.png";
                 }
                 return c;
             }

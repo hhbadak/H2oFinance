@@ -51,6 +51,7 @@
     <Compile Include="NFT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Talepler.cs" />
+    <Compile Include="Uyeler.cs" />
     <Compile Include="Yoneticiler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

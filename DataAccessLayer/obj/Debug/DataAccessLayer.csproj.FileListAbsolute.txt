@@ -4,3 +4,9 @@ C:\Users\DELL\Documents\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLa
 C:\Users\DELL\Documents\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Documents\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\DELL\Documents\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\H2oFinance\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

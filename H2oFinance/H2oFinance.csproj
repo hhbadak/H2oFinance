@@ -75,6 +75,7 @@
     <Content Include="AdminPanel\Images\GirisSayfasi.png" />
     <Content Include="AdminPanel\Images\H2oDamlaLogo.png" />
     <Content Include="AdminPanel\Images\NftCoinImage\kripto.PNG" />
+    <Content Include="AdminPanel\Images\NftCoinImage\none.png" />
     <Content Include="AdminPanel\KriptoDuzenle.aspx" />
     <Content Include="AdminPanel\KriptoEkle.aspx" />
     <Content Include="AdminPanel\KriptoListele.aspx" />

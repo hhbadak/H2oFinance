@@ -19,13 +19,11 @@ namespace H2oFinance.AdminPanel
                 if (!IsPostBack)
                 {
                     int id = Convert.ToInt32(Request.QueryString["mid"]);
-                    dm.coinListele();
                     Coinler c = dm.kriptoGetir(id);
                     tb_coinAdi.Text = c.Isim;
                     tb_coinKisaltma.Text = c.CoinNick;
                     tb_mArz.Text = c.Max_Arz.ToString();
                 }
-
             }
             else
             {
@@ -37,6 +35,7 @@ namespace H2oFinance.AdminPanel
         {
             int id = Convert.ToInt32(Request.QueryString["mid"]);
             Coinler c = dm.kriptoGetir(id);
+            c.ID = id;
             c.Isim = tb_coinAdi.Text;
             c.CoinNick = tb_coinKisaltma.Text;
             c.Max_Arz = Convert.ToInt32(tb_mArz.Text);
@@ -48,7 +47,7 @@ namespace H2oFinance.AdminPanel
                     string uzanti = fi.Extension;
                     string isim = Guid.NewGuid().ToString();
                     c.Resim = isim + uzanti;
-                    fu_resim.SaveAs(Server.MapPath("../Images/NftCoinImage/" + isim + uzanti));
+                    fu_resim.SaveAs(Server.MapPath("~/AdminPanel/Images/NftCoinImage/" + isim + uzanti));
                 }
                 else
                 {

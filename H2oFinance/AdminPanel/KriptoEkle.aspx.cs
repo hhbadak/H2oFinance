@@ -35,7 +35,6 @@ namespace H2oFinance.AdminPanel
                                 coin.CoinNick = tb_nick.Text;
                                 coin.Max_Arz = Convert.ToInt32(tb_arz.Text);
                                 coin.Fiyat = Convert.ToDecimal(tb_fiyat.Text);
-
                             }
                             else
                             {
@@ -59,7 +58,6 @@ namespace H2oFinance.AdminPanel
                                         tb_isim.Text = "";
                                         tb_nick.Text = "";
                                         tb_arz.Text = "";
-
                                     }
                                     else
                                     {
